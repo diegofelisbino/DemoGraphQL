@@ -1,8 +1,5 @@
 ﻿using AutoMapper;
-using CountriesAPI.Contracts;
 using CountriesAPI.Interfaces;
-using CountriesAPI.Models;
-using Newtonsoft.Json;
 using Country = CountriesAPI.Models.Country;
 
 namespace CountriesAPI.Services
