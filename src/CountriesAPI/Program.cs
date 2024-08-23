@@ -28,7 +28,7 @@ app.MapGet("/client-http/countries/{continent}", async (ICountryService service,
     try
     {
         if (string.IsNullOrEmpty(continent)) Results.BadRequest("Informe a sigla do continente");
-        var result = await service.GetCountriesByContinentByHttpClient(continent);
+        var result = await service.GetCountriesByContinentByHttpClient(continent.ToUpper());
         return Results.Ok(result);
     }    
     catch (Exception ex)
@@ -48,7 +48,7 @@ app.MapGet("/client-graphql/countries/{continent}", async (ICountryService servi
     {
         if (string.IsNullOrEmpty(continent)) Results.BadRequest("Informe a sigla do continente");
 
-        var coutries = await service.GetCountriesByContinentByGraphqlClient(continent);
+        var coutries = await service.GetCountriesByContinentByGraphqlClient(continent.ToUpper());
         return Results.Ok(coutries);
     }
     catch (Exception ex)
