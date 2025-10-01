@@ -9,6 +9,5 @@ Uma API Rest de estudo e com exemplos de consulta a API graphQl [countries.trevo
 - GET => /client-http/countries/{continent}
     - Utiliza biblioteca HttpClient
 
-
 ## DemoAPI
 Um exemplo de API GraphQl utilizando biblioteca HotChocolate.AspNetCore 
